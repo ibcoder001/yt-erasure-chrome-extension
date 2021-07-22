@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YT Erasure",
+  "description": "Erase your Liked Video's Playlist, Watch Later Playlist, Unsubscribe in bulk",
+  "version": "1.0",
+  "icons": {
+    "128": "128.png",
+    "48": "128.png",
+    "16": "128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "128.png"
+  },
+  "background": {
+    "servic_worker": "dist/popus.js"
+  },
+  "permissions": ["activeTab", "scripting"]
+}
