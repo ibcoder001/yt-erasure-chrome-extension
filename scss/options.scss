@@ -47,7 +47,7 @@ body {
 .container {
   @include dFlex();
   width: 100%;
-  max-width: 480px;
+  max-width: 540px;
   box-shadow: 0 0 10px #bbb;
   padding: 1rem;
   gap: 2rem;
@@ -72,15 +72,13 @@ body {
   margin-top: 0.5rem;
   letter-spacing: 0.5px;
   text-align: justify;
-  list-style: none;
-
-  .point {
-    margin-bottom: 0.3rem;
-    background: blanchedalmond;
-    padding: 1rem;
-  }
 }
-
+.point {
+  margin-bottom: 0.3rem;
+  background: blanchedalmond;
+  padding: 1rem;
+  list-style: none;
+}
 .contact-info {
   display: flex;
   flex-direction: column;
