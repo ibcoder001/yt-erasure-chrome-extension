@@ -4,16 +4,27 @@
   "description": "Erase your Liked Video's Playlist, Watch Later Playlist, Unsubscribe in bulk",
   "version": "1.0",
   "icons": {
-    "128": "128.png",
-    "48": "128.png",
-    "16": "128.png"
+    "128": "./icons/128.png",
+    "48": "./icons/48.png",
+    "32": "./icons/32.png",
+    "16": "./icons/16.png"
   },
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": "128.png"
+    "default_popup": "./html/popup.html",
+    "default_icon": {
+      "128": "./icons/128.png",
+      "48": "./icons/48.png",
+      "32": "./icons/32.png",
+      "16": "./icons/16.png"
+    }
   },
+  "options_page": "./html/options.html",
   "background": {
-    "servic_worker": "dist/popus.js"
+    "service_worker": "background-wrapper.js"
   },
-  "permissions": ["activeTab", "scripting"]
+  "permissions": ["activeTab", "tabs", "storage", "scripting"],
+  "host_permissions": [
+    "https://www.youtube.com/feed/channels",
+    "https://www.youtube.com/playlist?list=LL"
+  ]
 }

@@ -25,9 +25,9 @@ a {
   color: $link-color;
   cursor: pointer;
 
-  &:hover,
-  &:active,
-  &:focus {
+  &:not(.site-link-title):hover,
+  &:not(.site-link-title):active,
+  &:not(.site-link-title):focus {
     text-decoration: underline;
   }
 }

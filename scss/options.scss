@@ -1,0 +1,100 @@
+$popup-width: 180px;
+$link-color: hsla(0, 0%, 20%, 1);
+$fs: 1rem;
+$fs-title: 1.6rem;
+$sepator-color: hsla(0, 0%, 0%, 0.1);
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: $fs;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: $link-color;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+@mixin dFlex() {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+body {
+  @include dFlex();
+  height: 100vh;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  @include dFlex();
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 0 10px #bbb;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.title {
+  font-size: $fs-title;
+  color: dodgerblue;
+  border-bottom: 1px solid $sepator-color;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.description {
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
+
+.task-points {
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  list-style: none;
+
+  .point {
+    margin-bottom: 0.3rem;
+    background: blanchedalmond;
+    padding: 1rem;
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+
+  h2.title {
+    border: none;
+  }
+  .social {
+    background: oldlace;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.2rem;
+  }
+}
